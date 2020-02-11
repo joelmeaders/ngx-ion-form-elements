@@ -1,0 +1,18 @@
+<ion-item *ngIf="control" class="formItem" color="none">
+  <ion-label [position]="placeholder ? 'stacked' : 'floating'" color="medium">{{ caption }}</ion-label>
+  <ion-input
+    *ngIf="name"
+    [formControlName]="name"
+    [type]="type"
+    [placeholder]="placeholder"
+    [class]="cssClass"
+    [debounce]="debounce"
+  >
+    <ion-icon slot="start" [icon]="icon" color="medium" class="ion-no-padding padding-right-lg" *ngIf="icon"></ion-icon>
+  </ion-input>
+  <ife-validation-error
+    *ngIf="controlValidationMessages && (control.dirty && control.invalid)"
+    [control]="control"
+    [validationMessages]="controlValidationMessages"
+  ></ife-validation-error>
+</ion-item>

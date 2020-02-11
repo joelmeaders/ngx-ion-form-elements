@@ -1,0 +1,5 @@
+<span *ngFor="let v of validationMessages">
+  <ion-label position="stacked" color="danger" *ngIf="control.hasError(v.type) && !control.pristine" class="ion-padding-bottom">
+    <h5>{{ v.message }}</h5>
+  </ion-label>
+</span>

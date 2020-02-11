@@ -1,12 +1,27 @@
 import { NgModule } from '@angular/core';
-import { NgxIonFormElementsComponent } from './ngx-ion-form-elements.component';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { InputFieldComponent } from './input-field/input-field.component';
+import { ValidationErrorComponent } from './validation-error/validation-error.component';
 
 
 
 @NgModule({
-  declarations: [NgxIonFormElementsComponent],
-  imports: [
+  declarations: [
+    InputFieldComponent,
+    ValidationErrorComponent
   ],
-  exports: [NgxIonFormElementsComponent]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    IonicModule.forRoot()
+  ],
+  exports: [
+    InputFieldComponent,
+    ValidationErrorComponent
+  ]
 })
 export class NgxIonFormElementsModule { }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgxIonFormElementsComponent } from './ngx-ion-form-elements.component';
+import { InputFieldComponent } from './input-field.component';
 
-describe('NgxIonFormElementsComponent', () => {
-  let component: NgxIonFormElementsComponent;
-  let fixture: ComponentFixture<NgxIonFormElementsComponent>;
+describe('InputFieldComponent', () => {
+  let component: InputFieldComponent;
+  let fixture: ComponentFixture<InputFieldComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgxIonFormElementsComponent ]
+      declarations: [ InputFieldComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxIonFormElementsComponent);
+    fixture = TestBed.createComponent(InputFieldComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

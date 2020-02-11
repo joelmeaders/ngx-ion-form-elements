@@ -4,6 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
+    "@ionic/angular": "~4.11.10",
     "tslib": "^1.10.0"
   }
 }
