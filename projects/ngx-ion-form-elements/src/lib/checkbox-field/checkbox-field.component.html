@@ -1,0 +1,18 @@
+<ion-item lines="none" *ngIf="control">
+    <ion-label color="medium">{{ caption }}</ion-label>
+    <ion-checkbox
+      *ngIf="name"
+      [formControlName]="name"
+      [checked]="control.value"
+      [class]="cssClass"
+      debounce="500"
+      slot="start"
+    >
+    </ion-checkbox>
+    <ife-validation-error
+      *ngIf="controlValidationMessages"
+      [control]="control"
+      [validationMessages]="controlValidationMessages"
+    ></ife-validation-error>
+  </ion-item>
+  

@@ -1,0 +1,9 @@
+.header-label-position {
+  top: 10px;
+  position: relative;
+}
+
+.toggle {
+  --handle-background-checked: var(--ion-color-tertiary, #006494);
+  --background-checked: rgba(var(--ion-color-tertiary-rgb,0,100,148),0.3);
+}

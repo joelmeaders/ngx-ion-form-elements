@@ -1,0 +1,15 @@
+<ion-item *ngIf="control">
+	<ion-label position="stacked" color="medium">{{ caption }}</ion-label>
+	<ion-textarea
+		[formControlName]="name"
+    [placeholder]="placeholder"
+    [rows]="rows"
+		class="class"
+		debounce="debounce"
+	></ion-textarea>
+  <ife-validation-error
+    *ngIf="controlValidationMessages"
+		[control]="control"
+		[validationMessages]="controlValidationMessages"
+	></ife-validation-error>
+</ion-item>

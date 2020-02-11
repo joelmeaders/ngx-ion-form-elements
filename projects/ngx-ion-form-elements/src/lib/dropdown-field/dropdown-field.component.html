@@ -1,0 +1,23 @@
+<ion-item *ngIf="control">
+  <ion-label position="stacked" color="medium">{{ caption }}</ion-label>
+  <ion-select
+    *ngIf="name"
+    [formControlName]="name"
+    [value]="value"
+    [placeholder]="placeholder"
+    [class]="cssClass"
+    [interface]="interface"
+    [interfaceOptions]="alertOptions"
+    [multiple]="multiSelect"
+    (ionChange)="change($event)"
+  >
+    <ion-select-option *ngFor="let item of items" value="{{ item.Id }}">
+      {{ item.Text || item.Title || item.Name }}
+    </ion-select-option>
+  </ion-select>
+  <ife-validation-error
+    *ngIf="controlValidationMessages"
+    [control]="control"
+    [validationMessages]="controlValidationMessages"
+  ></ife-validation-error>
+</ion-item>

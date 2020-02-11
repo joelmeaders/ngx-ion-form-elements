@@ -1,0 +1,18 @@
+<ion-item>
+  <ion-label position="stacked" color="medium">{{ caption }}</ion-label>
+  <ion-input
+    *ngIf="name"
+    [formControlName]="name"
+    [value]="!nullDate(value) ? (value | date: 'fullDate') : undefined"
+    [placeholder]="placeholder"
+    [class]="cssClass"
+    debounce="debounce"
+  >
+  </ion-input>
+  <ion-icon tappable name="calendar" slot="end" (click)="openCalendar($event)" class="ion-padding-top"></ion-icon>
+  <ife-validation-error
+    *ngIf="controlValidationMessages"
+    [control]="control"
+    [validationMessages]="controlValidationMessages"
+  ></ife-validation-error>
+</ion-item>

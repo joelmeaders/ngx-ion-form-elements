@@ -1,0 +1,17 @@
+<ion-note class="ion-padding-start header-label-position" *ngIf="headerLabel">{{ headerLabel }}</ion-note>
+<ion-item lines="none" *ngIf="control" button (click)="control.setValue(!control.value)" class="ion-text-wrap" color="none">
+  <ion-label [color]="control.value ? 'tertiary' : 'medium'" class="ion-text-wrap">{{ caption }}</ion-label>
+  <ion-toggle
+    *ngIf="name"
+		(click)="control.setValue(!control.value)"
+    [formControlName]="name"
+    [checked]="control.value"
+    class="toggle"
+		slot="end"
+  ></ion-toggle>
+  <ife-validation-error
+    *ngIf="controlValidationMessages"
+    [control]="control"
+    [validationMessages]="controlValidationMessages"
+  ></ife-validation-error>
+</ion-item>
