@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-ion-form-elements": [
+        "dist/ngx-ion-form-elements/ngx-ion-form-elements",
+        "dist/ngx-ion-form-elements"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1, 
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ngx-ion-form-elements": {
+      "projectType": "library",
+      "root": "projects/ngx-ion-form-elements",
+      "sourceRoot": "projects/ngx-ion-form-elements/src",
+      "prefix": "ife",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-ion-form-elements/tsconfig.lib.json",
+            "project": "projects/ngx-ion-form-elements/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-ion-form-elements/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-ion-form-elements/src/test.ts",
+            "tsConfig": "projects/ngx-ion-form-elements/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-ion-form-elements/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-ion-form-elements/tsconfig.lib.json",
+              "projects/ngx-ion-form-elements/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-ion-form-elements"
 }
