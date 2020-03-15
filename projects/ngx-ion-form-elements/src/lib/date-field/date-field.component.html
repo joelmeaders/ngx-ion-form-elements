@@ -2,7 +2,7 @@
   <ion-label position="stacked" color="medium">{{ caption }}</ion-label>
   <ion-input
     *ngIf="name"
-    [formControlName]="name"
+    [name]="name"
     [value]="!nullDate(value) ? (value | date: 'fullDate') : undefined"
     [placeholder]="placeholder"
     [class]="cssClass"

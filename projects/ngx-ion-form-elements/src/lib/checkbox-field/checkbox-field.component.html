@@ -2,7 +2,7 @@
     <ion-label color="medium">{{ caption }}</ion-label>
     <ion-checkbox
       *ngIf="name"
-      [formControlName]="name"
+      [name]="name"
       [checked]="control.value"
       [class]="cssClass"
       debounce="500"

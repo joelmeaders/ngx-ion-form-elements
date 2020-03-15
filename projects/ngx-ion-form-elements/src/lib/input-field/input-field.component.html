@@ -2,7 +2,7 @@
   <ion-label [position]="placeholder ? 'stacked' : 'floating'" color="medium">{{ caption }}</ion-label>
   <ion-input
     *ngIf="name"
-    [formControlName]="name"
+    [name]="name"
     [type]="type"
     [placeholder]="placeholder"
     [class]="cssClass"

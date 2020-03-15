@@ -4,7 +4,7 @@
   <ion-toggle
     *ngIf="name"
 		(click)="control.setValue(!control.value)"
-    [formControlName]="name"
+    [name]="name"
     [checked]="control.value"
     class="toggle"
 		slot="end"
