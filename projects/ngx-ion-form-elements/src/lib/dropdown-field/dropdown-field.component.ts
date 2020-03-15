@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { ControlContainer, FormGroupDirective } from '@angular/forms';
 import { BaseControl } from '../base-control';
 
@@ -6,7 +6,8 @@ import { BaseControl } from '../base-control';
   selector: 'ife-dropdown-field',
   templateUrl: './dropdown-field.component.html',
   styleUrls: ['./dropdown-field.component.scss'],
-  viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }]
+  viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropdownFieldComponent extends BaseControl {
   @Input() public items: any[];

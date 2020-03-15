@@ -1,14 +1,15 @@
 <ion-item *ngIf="control">
 	<ion-label position="stacked" color="medium">{{ caption }}</ion-label>
-	<ion-textarea
+  <ion-textarea
+    *ngIf="name"
 		[name]="name"
     [placeholder]="placeholder"
     [rows]="rows"
-		class="class"
-		debounce="debounce"
+		[class]="cssClass"
+		[debounce]="debounce"
 	></ion-textarea>
   <ife-validation-error
-    *ngIf="controlValidationMessages"
+    *ngIf="controlValidationMessages && (control.dirty && control.invalid)"
 		[control]="control"
 		[validationMessages]="controlValidationMessages"
 	></ife-validation-error>
