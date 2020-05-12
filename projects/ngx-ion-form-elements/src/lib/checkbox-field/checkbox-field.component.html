@@ -2,11 +2,13 @@
     <ion-label color="medium">{{ caption }}</ion-label>
     <ion-checkbox
       *ngIf="name"
+      [formControlName]="name"
       [name]="name"
       [checked]="control.value"
       [class]="cssClass"
       debounce="500"
       slot="start"
+      [disabled]="disabled"
     >
     </ion-checkbox>
     <ife-validation-error

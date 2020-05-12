@@ -10,6 +10,7 @@ export abstract class BaseControl implements OnInit {
   @Input() public cssClass: string;
   @Input() public controlValidationMessages: any;
   @Input() public debounce = 500;
+  @Input() public disabled = false;
 
   public ngOnInit() {
 

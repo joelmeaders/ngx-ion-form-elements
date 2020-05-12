@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { ControlContainer, FormGroupDirective } from '@angular/forms';
+import { BaseControl } from '../base-control';
 
 @Component({
   selector: 'ife-checkbox-field',
@@ -8,14 +9,6 @@ import { ControlContainer, FormGroupDirective } from '@angular/forms';
   viewProviders: [{ provide: ControlContainer, useExisting: FormGroupDirective }],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CheckboxFieldComponent {
-  @Input() public name: string;
-  @Input() public value: string;
+export class CheckboxFieldComponent extends BaseControl {
   @Input() public caption: string;
-  @Input() public cssClass: string;
-  @Input() public controlValidationMessages: any;
-  @Input() public control: any;
-
-  constructor() { }
-
 }

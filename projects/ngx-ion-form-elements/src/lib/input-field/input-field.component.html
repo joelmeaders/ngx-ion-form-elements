@@ -2,11 +2,13 @@
   <ion-label [position]="placeholder ? 'stacked' : 'floating'" color="medium">{{ caption }}</ion-label>
   <ion-input
     *ngIf="name"
+    [formControlName]="name"
     [name]="name"
     [type]="type"
     [placeholder]="placeholder"
     [class]="cssClass"
     [debounce]="debounce"
+    [disabled]="disabled"
   >
     <ion-icon slot="start" [icon]="icon" color="medium" class="ion-no-padding padding-right-lg" *ngIf="icon"></ion-icon>
   </ion-input>

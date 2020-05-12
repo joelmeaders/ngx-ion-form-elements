@@ -3,11 +3,13 @@
   <ion-label [color]="control.value ? 'tertiary' : 'medium'" class="ion-text-wrap">{{ caption }}</ion-label>
   <ion-toggle
     *ngIf="name"
-		(click)="control.setValue(!control.value)"
+    [formControlName]="name"
+    (click)="control.setValue(!control.value)"
     [name]="name"
     [checked]="control.value"
     class="toggle"
-		slot="end"
+    slot="end"
+    [disabled]="disabled"
   ></ion-toggle>
   <ife-validation-error
     *ngIf="controlValidationMessages"
